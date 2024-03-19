@@ -4,7 +4,7 @@ import Foundation
 
 extension Bundle {
     static var dexcareSDK: Bundle {
-        let currentBundle = Bundle(for: DexcareSDK.self)
+        let currentBundle = Bundle.module
         
         // Because OpenTok is a static framework,
         // We may need to expose Dexcare as a static framework/resource bundle for development
@@ -24,6 +24,6 @@ func localizeString(_ key: String, comment: String = "") -> String {
     if stringValue != key {
         return stringValue
     } else {
-        return NSLocalizedString(key, bundle: .dexcareSDK, comment: comment)
+        return NSLocalizedString(key, bundle: .module, comment: comment)
     }
 }
