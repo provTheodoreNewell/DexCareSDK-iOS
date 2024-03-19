@@ -24,6 +24,6 @@ func localizeString(_ key: String, comment: String = "") -> String {
     if stringValue != key {
         return stringValue
     } else {
-        return NSLocalizedString(key, bundle: .module, comment: comment)
+        return NSLocalizedString(key, bundle: .dexcareSDK, comment: comment)
     }
 }
